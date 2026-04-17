@@ -1,46 +1,248 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Acreditación</title>
-
-<style>
-body{
-margin:0;
-font-family:Arial, sans-serif;
-background:#0f172a;
-color:white;
-display:flex;
-justify-content:center;
-align-items:center;
-height:100vh;
-}
-
-.card{
-text-align:center;
-background:#1e293b;
-padding:50px;
-border-radius:16px;
-box-shadow:0 10px 30px rgba(0,0,0,.3);
-}
-
-h1{
-font-size:56px;
-margin-bottom:15px;
-}
-
-p{
-font-size:20px;
-opacity:.8;
-}
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Acreditación | Dashboard Ejecutivo</title>
+  <meta name="description" content="Dashboard ejecutivo para seguimiento de acreditación institucional." />
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
-<div class="card">
-<h1>Acreditación</h1>
-<p>Mi primer sitio web en GitHub</p>
-</div>
+  <header class="hero">
+    <nav class="nav">
+      <div class="brand">Acreditación</div>
+      <div class="nav-links">
+        <a href="#indicadores">Indicadores</a>
+        <a href="#criterios">Criterios</a>
+        <a href="#roadmap">Roadmap</a>
+        <a href="#evidencias">Evidencias</a>
+      </div>
+    </nav>
+
+    <section class="hero-content">
+      <div class="hero-text">
+        <span class="badge">Dashboard Ejecutivo</span>
+        <h1>Seguimiento estratégico del proceso de acreditación institucional</h1>
+        <p>
+          Plataforma visual para monitorear indicadores, criterios, hitos y evidencias
+          clave del proceso de autoevaluación y mejora continua.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#indicadores">Ver indicadores</a>
+          <a class="btn btn-secondary" href="#roadmap">Ver roadmap</a>
+        </div>
+      </div>
+
+      <div class="hero-panel">
+        <div class="panel-card">
+          <p class="panel-label">Estado global</p>
+          <h2>78%</h2>
+          <p class="panel-sub">Avance consolidado del proceso</p>
+        </div>
+        <div class="panel-grid">
+          <div class="mini-card">
+            <span>Dimensiones</span>
+            <strong>5</strong>
+          </div>
+          <div class="mini-card">
+            <span>Indicadores</span>
+            <strong>24</strong>
+          </div>
+          <div class="mini-card">
+            <span>Evidencias</span>
+            <strong>132</strong>
+          </div>
+          <div class="mini-card">
+            <span>Riesgos</span>
+            <strong>4</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+  </header>
+
+  <main class="container">
+    <section id="indicadores" class="section">
+      <div class="section-heading">
+        <h2>Indicadores estratégicos</h2>
+        <p>Monitoreo ejecutivo de resultados clave asociados al aseguramiento de la calidad.</p>
+      </div>
+
+      <div class="kpi-grid">
+        <article class="kpi-card">
+          <div class="kpi-top">
+            <span class="kpi-title">Retención 1er año</span>
+            <span class="status positive">+2.4%</span>
+          </div>
+          <div class="kpi-value">84.6%</div>
+          <div class="progress">
+            <div class="progress-bar w-85"></div>
+          </div>
+          <p class="kpi-foot">Meta anual: 86%</p>
+        </article>
+
+        <article class="kpi-card">
+          <div class="kpi-top">
+            <span class="kpi-title">Titulación oportuna</span>
+            <span class="status warning">En seguimiento</span>
+          </div>
+          <div class="kpi-value">61.2%</div>
+          <div class="progress">
+            <div class="progress-bar w-61"></div>
+          </div>
+          <p class="kpi-foot">Meta anual: 68%</p>
+        </article>
+
+        <article class="kpi-card">
+          <div class="kpi-top">
+            <span class="kpi-title">Satisfacción estudiantil</span>
+            <span class="status positive">+4.1%</span>
+          </div>
+          <div class="kpi-value">89.3%</div>
+          <div class="progress">
+            <div class="progress-bar w-89"></div>
+          </div>
+          <p class="kpi-foot">Meta anual: 90%</p>
+        </article>
+
+        <article class="kpi-card">
+          <div class="kpi-top">
+            <span class="kpi-title">Empleabilidad</span>
+            <span class="status neutral">Estable</span>
+          </div>
+          <div class="kpi-value">76.8%</div>
+          <div class="progress">
+            <div class="progress-bar w-77"></div>
+          </div>
+          <p class="kpi-foot">Meta anual: 80%</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="criterios" class="section">
+      <div class="section-heading">
+        <h2>Estado de criterios</h2>
+        <p>Visualización resumida del nivel de avance por ámbito crítico del proceso.</p>
+      </div>
+
+      <div class="criteria-grid">
+        <article class="criteria-card">
+          <div class="criteria-head">
+            <h3>Gobierno y gestión</h3>
+            <span class="pill green">Cumplido</span>
+          </div>
+          <p>Estructura de gobernanza, seguimiento estratégico y control institucional consolidados.</p>
+        </article>
+
+        <article class="criteria-card">
+          <div class="criteria-head">
+            <h3>Docencia y resultados</h3>
+            <span class="pill yellow">En proceso</span>
+          </div>
+          <p>Se observan avances, con foco pendiente en trayectorias y resultados de aprendizaje.</p>
+        </article>
+
+        <article class="criteria-card">
+          <div class="criteria-head">
+            <h3>Aseguramiento interno</h3>
+            <span class="pill green">Cumplido</span>
+          </div>
+          <p>Existen mecanismos regulares de evaluación, monitoreo y mejora continua.</p>
+        </article>
+
+        <article class="criteria-card">
+          <div class="criteria-head">
+            <h3>Vinculación con el medio</h3>
+            <span class="pill red">Riesgo</span>
+          </div>
+          <p>Se requiere fortalecer sistematización de resultados, trazabilidad y evidencia de impacto.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="roadmap" class="section">
+      <div class="section-heading">
+        <h2>Roadmap del proceso</h2>
+        <p>Secuencia de hitos principales del ciclo de acreditación.</p>
+      </div>
+
+      <div class="timeline">
+        <article class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-step">Etapa 1</span>
+            <h3>Diagnóstico institucional</h3>
+            <p>Levantamiento de información estratégica, análisis de brechas y definición de alcance.</p>
+          </div>
+        </article>
+
+        <article class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-step">Etapa 2</span>
+            <h3>Autoevaluación</h3>
+            <p>Desarrollo participativo del informe, validación interna y consolidación de evidencias.</p>
+          </div>
+        </article>
+
+        <article class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-step">Etapa 3</span>
+            <h3>Plan de mejora</h3>
+            <p>Priorización de acciones, responsables, metas, plazos y mecanismos de seguimiento.</p>
+          </div>
+        </article>
+
+        <article class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-step">Etapa 4</span>
+            <h3>Visita externa y resolución</h3>
+            <p>Preparación institucional, coordinación de agenda y gestión posterior de observaciones.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="evidencias" class="section">
+      <div class="section-heading">
+        <h2>Repositorio de evidencias</h2>
+        <p>Vista referencial de la organización documental del proceso.</p>
+      </div>
+
+      <div class="evidence-grid">
+        <article class="evidence-card">
+          <h3>Normativa institucional</h3>
+          <p>Políticas, reglamentos, modelos y lineamientos vigentes.</p>
+          <button class="btn btn-ghost">Ver carpeta</button>
+        </article>
+
+        <article class="evidence-card">
+          <h3>Indicadores y reportes</h3>
+          <p>Series históricas, tableros, actas de seguimiento y reportes ejecutivos.</p>
+          <button class="btn btn-ghost">Ver carpeta</button>
+        </article>
+
+        <article class="evidence-card">
+          <h3>Encuestas y estudios</h3>
+          <p>Resultados de percepción, satisfacción, empleabilidad y experiencia estudiantil.</p>
+          <button class="btn btn-ghost">Ver carpeta</button>
+        </article>
+
+        <article class="evidence-card">
+          <h3>Planes de mejora</h3>
+          <p>Iniciativas, cartas Gantt, matrices de seguimiento y evidencias de cierre.</p>
+          <button class="btn btn-ghost">Ver carpeta</button>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2026 Acreditación · Sitio ejecutivo de seguimiento institucional</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
