@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Acreditación</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      font-family: Arial, Helvetica, sans-serif;
+      background: linear-gradient(135deg, #0f172a, #1e293b);
+      color:white;
+      min-height:100vh;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+    }
+
+    .contenedor{
+      text-align:center;
+      background: rgba(255,255,255,0.08);
+      padding:50px;
+      border-radius:18px;
+      backdrop-filter: blur(8px);
+      box-shadow: 0 15px 40px rgba(0,0,0,0.25);
+      width:90%;
+      max-width:700px;
+    }
+
+    h1{
+      font-size:56px;
+      margin-bottom:15px;
+      letter-spacing:1px;
+    }
+
+    p{
+      font-size:20px;
+      opacity:0.9;
+      margin-bottom:30px;
+    }
+
+    .boton{
+      display:inline-block;
+      padding:14px 28px;
+      background:#2563eb;
+      color:white;
+      text-decoration:none;
+      border-radius:10px;
+      font-weight:bold;
+      transition:0.3s;
+    }
+
+    .boton:hover{
+      background:#1d4ed8;
+      transform:translateY(-3px);
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="contenedor">
+    <h1>Acreditación</h1>
+    <p>Plataforma web de apoyo a la gestión institucional y aseguramiento de la calidad.</p>
+    <a href="#" class="boton">Comenzar</a>
+  </div>
+
+</body>
+</html>
