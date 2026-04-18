@@ -1,9 +1,10 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const buttons = document.querySelectorAll(".btn-ghost");
+  const links = document.querySelectorAll('.nav-links a');
 
-  buttons.forEach((button) => {
-    button.addEventListener("click", () => {
-      alert("Aquí puedes vincular una carpeta, documento o repositorio de evidencias.");
+  links.forEach((link) => {
+    link.addEventListener('click', () => {
+      links.forEach((item) => item.classList.remove('active'));
+      link.classList.add('active');
     });
   });
 });
