@@ -89,7 +89,7 @@ a {
 
 .hero-text p {
   margin: 0;
-  max-width: 700px;
+  max-width: 720px;
   color: var(--muted);
   font-size: 1.05rem;
   line-height: 1.7;
@@ -143,12 +143,6 @@ a {
   border-color: var(--line);
 }
 
-.btn-ghost {
-  background: transparent;
-  color: var(--text);
-  border-color: var(--line);
-}
-
 .hero-panel {
   background: linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.04));
   border: 1px solid var(--line);
@@ -173,36 +167,41 @@ a {
 
 .panel-card h2 {
   margin: 0;
-  font-size: 3rem;
-  line-height: 1;
+  font-size: 2.7rem;
+  line-height: 1.05;
 }
 
 .panel-sub {
   margin: 10px 0 0;
   color: var(--muted);
+  line-height: 1.5;
 }
 
-.panel-grid {
+.panel-grid,
+.mini-stats {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 14px;
 }
 
-.mini-card {
+.mini-card,
+.mini-stats div {
   background: rgba(255, 255, 255, 0.04);
   border: 1px solid var(--line);
   border-radius: 18px;
   padding: 18px;
 }
 
-.mini-card span {
+.mini-card span,
+.mini-stats span {
   display: block;
   color: var(--muted);
   font-size: 0.9rem;
   margin-bottom: 8px;
 }
 
-.mini-card strong {
+.mini-card strong,
+.mini-stats strong {
   font-size: 1.4rem;
 }
 
@@ -242,7 +241,10 @@ a {
 
 .kpi-card,
 .criteria-card,
-.evidence-card {
+.evidence-card,
+.content-card,
+.table-card,
+.alt-card {
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid var(--line);
   border-radius: var(--radius);
@@ -250,10 +252,20 @@ a {
   box-shadow: var(--shadow);
 }
 
+.content-grid {
+  display: grid;
+  gap: 18px;
+}
+
+.content-grid.two {
+  grid-template-columns: repeat(2, 1fr);
+}
+
 .kpi-top,
-.criteria-head {
+.criteria-head,
+.alt-head {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   gap: 12px;
 }
@@ -270,30 +282,14 @@ a {
   letter-spacing: -1px;
 }
 
-.kpi-foot {
+.kpi-foot,
+.note,
+.alt-sub {
   margin: 12px 0 0;
   color: var(--muted);
-  font-size: 0.92rem;
+  font-size: 0.94rem;
+  line-height: 1.55;
 }
-
-.progress {
-  width: 100%;
-  height: 10px;
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.08);
-  overflow: hidden;
-}
-
-.progress-bar {
-  height: 100%;
-  border-radius: 999px;
-  background: linear-gradient(90deg, var(--accent), var(--accent-2));
-}
-
-.w-85 { width: 85%; }
-.w-61 { width: 61%; }
-.w-89 { width: 89%; }
-.w-77 { width: 77%; }
 
 .status,
 .pill {
@@ -336,17 +332,64 @@ a {
 
 .criteria-card h3,
 .evidence-card h3,
-.timeline-content h3 {
+.timeline-content h3,
+.content-card h3,
+.table-card h3,
+.alt-card h3 {
   margin: 0 0 12px;
   font-size: 1.1rem;
 }
 
 .criteria-card p,
 .evidence-card p,
-.timeline-content p {
+.timeline-content p,
+.content-card p,
+.alt-card p {
   margin: 0;
   color: var(--muted);
   line-height: 1.65;
+}
+
+.clean-list {
+  margin: 0;
+  padding-left: 18px;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.clean-list.compact li {
+  margin-bottom: 6px;
+}
+
+.lead-number {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--text);
+  margin-bottom: 8px !important;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  font-size: 0.94rem;
+}
+
+.data-table th,
+.data-table td {
+  text-align: left;
+  padding: 12px 10px;
+  border-bottom: 1px solid var(--line);
+  vertical-align: top;
+}
+
+.data-table th {
+  color: var(--text);
+  font-weight: 700;
+}
+
+.data-table td {
+  color: var(--muted);
 }
 
 .timeline {
@@ -402,8 +445,20 @@ a {
   letter-spacing: 0.8px;
 }
 
-.evidence-card .btn {
-  margin-top: 16px;
+.alt-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.alt-card h4 {
+  margin: 16px 0 8px;
+  font-size: 0.98rem;
+  color: var(--text);
+}
+
+.conclusion-card {
+  margin-top: 18px;
 }
 
 .footer {
@@ -418,11 +473,13 @@ a {
   .hero-content,
   .kpi-grid,
   .criteria-grid,
-  .evidence-grid {
+  .evidence-grid,
+  .alt-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .hero-content {
+  .hero-content,
+  .content-grid.two {
     grid-template-columns: 1fr;
   }
 }
@@ -447,7 +504,9 @@ a {
   .kpi-grid,
   .criteria-grid,
   .evidence-grid,
-  .panel-grid {
+  .panel-grid,
+  .mini-stats,
+  .alt-grid {
     grid-template-columns: 1fr;
   }
 
@@ -457,5 +516,11 @@ a {
 
   .section-heading h2 {
     font-size: 1.6rem;
+  }
+
+  .data-table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
   }
 }
